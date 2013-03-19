@@ -10,10 +10,12 @@
       mode   => 0644,
     }
 
-    file {'c:/dev/tmp/test3':
-      ensure => link,
-      target => 'c:/dev/tmp/test1',
-    }
+# Windows can't symlink
+# leaving here for reference
+#    file {'c:/dev/tmp/test3':
+#      ensure => link,
+#      target => 'c:/dev/tmp/test1',
+#    }
 
     notify {"I'm notifying you.":} # Whitespace is fungible, remember.
     notify {"So am I!":}
