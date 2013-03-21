@@ -3,4 +3,8 @@
 package { 'git':
   ensure          => installed,
   source          => 'c:/depot/Git-1.8.1.2-preview20130201.exe',
+  install_options => [
+    '/sp-', '/silent', '/norestart'
+  ]
+  
 }
